@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ValidationService} from '../validation.service';
 
 @Component({
   selector: 'app-cart',
@@ -13,7 +14,12 @@ public myData = [
   {name:"product3",price:3000,brandName:"Leecooper"}
 ]
 
-  constructor() { }
+  constructor(public myvar:ValidationService) { 
+    //alert(2)
+    console.log("cart======")
+    console.log(this.myvar)
+
+  }
 
   ngOnInit() {
   }

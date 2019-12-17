@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ValidationService} from '../validation.service';
 
 @Component({
   selector: 'app-password',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PasswordComponent implements OnInit {
 
-  constructor() { }
+  constructor(public myvar:ValidationService) {
+    //alert(1)
+    console.log("======")
+    console.log(this.myvar)
+   }
 
   ngOnInit() {
   }
